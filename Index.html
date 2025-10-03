@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RE Development Pro Forma Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Development Project Returns Calculator 📈</h1>
+        <p>Estimate the Equity Multiple (EM) and Internal Rate of Return (IRR) for your project.</p>
+
+        <div class="input-group">
+            <label for="initialEquity">Initial Investor Equity ($):</label>
+            <input type="number" id="initialEquity" value="400000" min="1" required>
+        </div>
+
+        <div class="input-group">
+            <label for="projectDuration">Project Duration (Years):</label>
+            <input type="number" id="projectDuration" value="2" min="1" max="10" required>
+        </div>
+
+        <div class="input-group">
+            <label for="totalDistribution">Total Cash Distribution at Sale ($):</label>
+            <input type="number" id="totalDistribution" value="650000" min="1" required>
+            <small>This is the total cash returned to the investor upon sale (Return of Capital + Profit).</small>
+        </div>
+
+        <button onclick="calculateReturns()">Calculate Returns</button>
+
+        <div class="results" id="results">
+            <h2>Results</h2>
+            <p><strong>Equity Multiple (EM):</strong> <span id="emResult">--</span></p>
+            <p><strong>Internal Rate of Return (IRR):</strong> <span id="irrResult">--</span></p>
+            <p><strong>Total Profit:</strong> <span id="profitResult">--</span></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
